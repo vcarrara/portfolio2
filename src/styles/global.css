@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-background;
+    @apply min-h-screen;
+    @apply text-white;
+}
