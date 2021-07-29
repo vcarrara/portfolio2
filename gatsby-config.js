@@ -1,4 +1,5 @@
 module.exports = {
+    pathPrefix: '/portfolio2',
     siteMetadata: {
         siteUrl: 'https://www.yourdomain.tld',
         title: 'portfolio-gatsby',
