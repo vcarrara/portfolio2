@@ -3,7 +3,7 @@ import 'twin.macro'
 import { Container, Badge } from '../atoms'
 import { Timeline, TimelineEntry, TimelineYear } from '../organisms/Timeline'
 
-const TimelineLayout = ({ title, total, items }) => {
+const TimelineView = ({ title, total, items }) => {
     return (
         <Container tw="space-y-8">
             <div tw="space-y-4">
@@ -20,10 +20,10 @@ const TimelineLayout = ({ title, total, items }) => {
                             <TimelineYear>{fieldValue}</TimelineYear>
                             {nodes.map(({ id, html, frontmatter }) => (
                                 <div key={id}>
-                                    <TimelineEntry key={id}>
+                                    <TimelineEntry>
                                         <div tw="space-y-8">
                                             <h3 tw="text-3xl font-bold">{frontmatter.title}</h3>
-                                            <p tw="text-justify" dangerouslySetInnerHTML={{ __html: html }} />
+                                            <div tw="text-justify" dangerouslySetInnerHTML={{ __html: html }} />
                                             <div tw="space-x-1 text-4xl">
                                                 {frontmatter.icons.map(([title, className]) => (
                                                     <span key={title} title={title}>
@@ -42,4 +42,4 @@ const TimelineLayout = ({ title, total, items }) => {
     )
 }
 
-export default TimelineLayout
+export default TimelineView

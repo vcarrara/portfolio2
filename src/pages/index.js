@@ -1,13 +1,13 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import Landing from '../components/Landing'
+import { LandingView } from '../components/views'
 import { MainLayout } from '../components/layouts'
 
 const IndexPage = ({
     data: {
         topics,
         categories: { nodes },
-        total: { totalCount }
+        total: { totalCount },
     },
 }) => {
     const topicsCount = topics.group.reduce((accumulator, { fieldValue, totalCount }) => ({ ...accumulator, [fieldValue]: totalCount }), {})
@@ -15,7 +15,7 @@ const IndexPage = ({
 
     return (
         <MainLayout>
-            <Landing categories={categories} totalCount={totalCount} />
+            <LandingView categories={categories} totalCount={totalCount} />
         </MainLayout>
     )
 }

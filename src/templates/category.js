@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { MainLayout, TimelineLayout } from '../components/layouts'
+import { MainLayout } from '../components/layouts'
+import { TimelineView } from '../components/views'
 
 const Template = ({ data, pageContext }) => {
     const {
@@ -9,7 +10,7 @@ const Template = ({ data, pageContext }) => {
 
     return (
         <MainLayout>
-            <TimelineLayout items={group} total={totalCount} title={pageContext.title} />
+            <TimelineView items={group} total={totalCount} title={pageContext.title} />
         </MainLayout>
     )
 }

@@ -11,12 +11,13 @@
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build --prefix-paths",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve --prefix-paths",
     "clean": "gatsby clean",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
+    "@headlessui/react": "^1.4.0",
     "devicon": "^2.12.0",
     "gatsby": "^3.10.2",
     "gatsby-plugin-postcss": "^4.10.0",

@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby minimal starter
+  Portfolio of Victor Carrara
 </h1>
 
 ## 🚀 Quick start

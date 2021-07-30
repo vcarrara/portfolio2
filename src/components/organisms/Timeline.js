@@ -12,13 +12,13 @@ const Timeline = styled.div`
         content: '';
         left: 30px;
         z-index: -1;
-        ${tw`absolute w-1 h-full bg-primary top-0`}
+        ${tw`absolute w-1 h-full bg-primary-500 top-0`}
     }
 
     ${TimelineYear} {
         border-radius: 40px;
         padding: 0.7rem;
-        ${tw`bg-primary w-16 text-center`}
+        ${tw`bg-primary-500 w-16 text-center`}
     }
 
     ${TimelineGroup} {
@@ -26,20 +26,20 @@ const Timeline = styled.div`
 
         ${TimelineDate} {
             margin-left: 22px;
-            ${tw`flex items-center rounded-full w-5 h-5 bg-primary`}
+            ${tw`flex items-center rounded-full w-5 h-5 bg-primary-500`}
             &::after {
                 content: '';
                 width: calc(100% - 22px);
                 height: 2px;
                 z-index: -1;
                 left: 22px;
-                ${tw`absolute bg-primary`}
+                ${tw`absolute bg-primary-500`}
             }
         }
         ${TimelineContent} {
             width: 500px;
             border: 2px solid;
-            ${tw`rounded-2xl bg-background-lighter p-6 border-primary`}
+            ${tw`rounded-2xl bg-texture-600 p-6 border-primary-500`}
         }
     }
 `
