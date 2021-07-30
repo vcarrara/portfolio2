@@ -54,7 +54,7 @@ const LandingView = ({ categories, totalCount }) => {
                 {/* Cards */}
                 <div tw="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {categories.map(({ id, html, frontmatter, count }) => (
-                        <div key={id} tw="rounded-2xl bg-texture-600 p-6 space-y-4">
+                        <div key={id} tw="rounded-2xl bg-elevation-2 p-6 space-y-4">
                             <div tw="space-x-2 text-3xl">
                                 {frontmatter.icons.map(([description, className]) => (
                                     <span title={description} key={`devicon_${className}`}>

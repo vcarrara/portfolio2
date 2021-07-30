@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "color": "^4.0.0",
+    "postcss-color-mod-function": "^3.0.3",
     "prettier": "^2.3.2",
     "tailwindcss": "^2.2.7"
   }

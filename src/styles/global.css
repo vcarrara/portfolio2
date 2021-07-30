@@ -4,32 +4,45 @@
 
 :root {
     /* https://www.cssfontstack.com/oldsites/hexcolortool/ */
-    --primary-300: #1c13b2;
+    /* --primary-300: #1c13b2;
     --primary-400: #362dcc;
     --primary-500: #4f46e5;
     --primary-600: #6960ff;
-    --primary-700: #8279ff;
+    --primary-700: #8279ff; */
+    --primary-500: #4f46e5;
+    --primary-400: color-mod(#4f46e5 shade(5%));
+    --primary-300: color-mod(#4f46e5 shade(10%));
+    --primary-600: color-mod(#4f46e5 tint(5%));
+    --primary-700: color-mod(#4f46e5 tint(10%));
 
-    --texture-300: #000000;
-    --texture-400: #080808;
     --texture-500: #212121;
-    --texture-600: #3b3b3b;
-    --texture-700: #545454;
+    --texture-400: color-mod(#212121 shade(5%));
+    --texture-300: color-mod(#212121 shade(10%));
+    --texture-600: color-mod(#212121 tint(5%));
+    --texture-700: color-mod(#212121 tint(10%));
+
+    --elevation-1: #212121;
+    --elevation-2: color-mod(#212121 tint(2%));
+    --elevation-2: color-mod(#212121 tint(5%));
 
     --text-main: #ffffff;
 }
 
 body.light {
-    --texture-300: #ffffff;
-    --texture-400: #fafafa;
+    --elevation-1: #f3f4f6;
+    --elevation-2: color-mod(#f3f4f6 shade(2%));
+    --elevation-2: color-mod(#f3f4f6 shade(5%));
+
     --texture-500: #ededed;
-    --texture-600: #d4d4d4;
-    --texture-700: #bababa;
+    --texture-400: color-mod(#ededed shade(5%));
+    --texture-300: color-mod(#ededed shade(10%));
+    --texture-600: color-mod(#ededed tint(5%));
+    --texture-700: color-mod(#ededed tint(10%));
     --text-main: #212121;
 }
 
 body {
-    @apply bg-texture-500;
+    @apply bg-elevation-1;
     @apply min-h-screen;
     @apply text-text-main;
 }

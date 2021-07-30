@@ -3,17 +3,17 @@ import { Link } from 'gatsby'
 import tw, { styled } from 'twin.macro'
 import ThemeSwitcher from '../atoms/ThemeSwitcher'
 
-const NavbarWrapper = tw.div`flex justify-between px-8 py-4 bg-texture-500`
+const NavbarWrapper = tw.div`flex justify-between px-8 py-4`
 
-const ContactMeLink = tw.a`inline-flex items-center border border-transparent px-3.5 py-2 leading-4 font-medium rounded-full bg-primary-500 hover:bg-primary-400`
+const ContactMeLink = tw.a`text-white inline-flex items-center border border-transparent px-3.5 py-2 leading-4 font-medium rounded-full bg-primary-500 hover:bg-primary-400`
 
 const StyledLink = styled(Link)`
     ${tw`inline-flex items-center border border-transparent px-3.5 py-2 rounded-full bg-transparent`}
     &.active {
-        ${tw`bg-texture-600`}
+        ${tw`bg-elevation-2`}
     }
     &:hover {
-        ${tw`bg-texture-600`}
+        ${tw`bg-elevation-2`}
     }
 `
 
