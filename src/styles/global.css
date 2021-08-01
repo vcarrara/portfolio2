@@ -3,12 +3,6 @@
 @tailwind utilities;
 
 :root {
-    /* https://www.cssfontstack.com/oldsites/hexcolortool/ */
-    /* --primary-300: #1c13b2;
-    --primary-400: #362dcc;
-    --primary-500: #4f46e5;
-    --primary-600: #6960ff;
-    --primary-700: #8279ff; */
     --primary-500: #4f46e5;
     --primary-400: color-mod(#4f46e5 shade(5%));
     --primary-300: color-mod(#4f46e5 shade(10%));
@@ -29,9 +23,9 @@
 }
 
 body.light {
-    --elevation-1: #f3f4f6;
-    --elevation-2: color-mod(#f3f4f6 shade(2%));
-    --elevation-2: color-mod(#f3f4f6 shade(5%));
+    --elevation-1: color-mod(#f6f4f8 shade(5%));
+    --elevation-2: #f6f4f8;
+    --elevation-3: #ffffff;    
 
     --texture-500: #ededed;
     --texture-400: color-mod(#ededed shade(5%));
@@ -45,4 +39,5 @@ body {
     @apply bg-elevation-1;
     @apply min-h-screen;
     @apply text-text-main;
+    transition: color .5s ease;
 }

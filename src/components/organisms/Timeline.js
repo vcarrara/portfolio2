@@ -18,7 +18,7 @@ const Timeline = styled.div`
     ${TimelineYear} {
         border-radius: 40px;
         padding: 0.7rem;
-        ${tw`bg-primary-500 w-16 text-center`}
+        ${tw`bg-primary-500 w-16 text-center text-white`}
     }
 
     ${TimelineGroup} {
@@ -39,7 +39,7 @@ const Timeline = styled.div`
         ${TimelineContent} {
             width: 500px;
             border: 2px solid;
-            ${tw`rounded-2xl bg-texture-600 p-6 border-primary-500`}
+            ${tw`rounded-2xl bg-elevation-2 p-6 border-primary-500`}
         }
     }
 `

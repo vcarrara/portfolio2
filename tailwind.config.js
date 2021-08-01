@@ -1,16 +1,3 @@
-const Color = require('color')
-
-// const BASE_COLORS = {
-//     // primary: '#FF5252',
-//     primary: '#4F46E5',
-//     background: {
-//         dark: '#212121',
-//     },
-// }
-
-// const lighten = (hex, amount = 0.1) => Color(hex).lighten(amount).hex()
-// const darken = (hex, amount = 0.1) => Color(hex).darken(amount).hex()
-
 module.exports = {
     purge: ['./src/**/*.{js,jsx,ts,tsx}'],
     darkMode: 'class', // or 'media' or 'class'
@@ -25,32 +12,9 @@ module.exports = {
                 'text-main': 'var(--text-main)',
                 'elevation-1': 'var(--elevation-1)',
                 'elevation-2': 'var(--elevation-2)',
-                'elevation-3': 'var(--elevation-3)'
-                // 'texture-300': 'var(--texture-300)',
-                // 'texture-400': 'var(--texture-400)',
-                // 'texture-500': 'var(--texture-500)',
-                // 'texture-600': 'var(--texture-600)',
-                // 'texture-700': 'var(--texture-700)',
+                'elevation-3': 'var(--elevation-3)',
             },
         },
-        // colors: {
-        //     transparent: {
-        //         DEFAULT: 'transparent',
-        //     },
-        //     primary: {
-        //         lighter: lighten(BASE_COLORS.primary),
-        //         DEFAULT: BASE_COLORS.primary,
-        //         darker: darken(BASE_COLORS.primary),
-        //     },
-        //     background: {
-        //         lighter: lighten(BASE_COLORS.background.dark, 0.2),
-        //         DEFAULT: BASE_COLORS.background.dark,
-        //         darker: darken(BASE_COLORS.background.dark, 0.2),
-        //     },
-        //     white: {
-        //         DEFAULT: '#FFFFFF',
-        //     },
-        // },
     },
     variants: {
         extend: {},
