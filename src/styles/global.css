@@ -22,10 +22,10 @@
     --text-main: #ffffff;
 }
 
-body.light {
+body[data-theme='light'] {
     --elevation-1: color-mod(#f6f4f8 shade(5%));
     --elevation-2: #f6f4f8;
-    --elevation-3: #ffffff;    
+    --elevation-3: #ffffff;
 
     --texture-500: #ededed;
     --texture-400: color-mod(#ededed shade(5%));
@@ -39,5 +39,22 @@ body {
     @apply bg-elevation-1;
     @apply min-h-screen;
     @apply text-text-main;
-    transition: color .5s ease;
+    transition: color 0.5s ease;
+}
+
+::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-primary-600;
+    @apply rounded-lg;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-500;
 }
