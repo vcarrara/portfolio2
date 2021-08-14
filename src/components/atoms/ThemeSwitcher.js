@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useMemo } from 'react'
 import { Switch } from '@headlessui/react'
+import ThemeContext from '../../context/ThemeContext'
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
 const ThemeSwitcher = () => {
-    const [enabled, setEnabled] = useState(true)
+    const { theme, setTheme } = useContext(ThemeContext)
+    const enabled = useMemo(() => theme === 'dark', [theme])
 
-    useEffect(() => {
-        if (!enabled) {
-            document.body.classList.add('light')
-        } else {
-            document.body.classList.remove('light')
-        }
-    }, [enabled])
+    if (!theme) {
+        return (
+            <div className="bg-elevation-3 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"></div>
+        )
+    }
 
     return (
         <Switch
             checked={enabled}
-            onChange={setEnabled}
+            onChange={() => setTheme(enabled ? 'light' : 'dark')}
             className={classNames(
                 enabled ? 'bg-primary-500' : 'bg-elevation-3',
                 'relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500'
